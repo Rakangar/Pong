@@ -8,29 +8,29 @@ public class ComputerPaddle : Paddle
 
 	private void FixedUpdate()
 	{
-		if (this.ball.velocity.x > 0.0f)
+		if (ball.velocity.x > 0.0f)
 		{
-			if (this.ball.position.y > this.transform.position.y)
+			if (ball.position.y > transform.position.y)
 			{
-				_rigidbody.AddForce(Vector2.up * this.speed);
+				_rigidbody.AddForce(Vector2.up * speed);
 			}
 
-			else if (this.ball.position.y < this.transform.position.y)
+			else if (ball.position.y < transform.position.y)
 			{
-				_rigidbody.AddForce(Vector2.down * this.speed);
+				_rigidbody.AddForce(Vector2.down * speed);
 			}
 			
 		}
 
 		else
 		{
-			if (this.transform.position.y > 0.0f)
+			if (transform.position.y > 0.0f)
 			{
-				_rigidbody.AddForce(Vector2.down * this.speed);
+				_rigidbody.AddForce(Vector2.down * speed);
 			}
-			else if (this.transform.position.y <0.0f)
+			else if (transform.position.y <0.0f)
 			{
-				_rigidbody.AddForce(Vector2.up * this.speed);
+				_rigidbody.AddForce(Vector2.up * speed);
 			}
 		}
 	}
